@@ -10,3 +10,8 @@ def test_get():
 def test_slice():
     assert my_slice([1, 2, 3, 4], 1, 3) == [2, 3]
     assert my_slice([1, 2, 3], 1) == [2, 3]
+    assert my_slice([1, 2, 3, 4, 5], -2) == [4, 5]
+    assert my_slice([]) == []
+    assert my_slice([1, 2, 3, 4, 5], 10) == []
+    assert my_slice([1, 2, 3, 4, 5], -10) == [1, 2, 3, 4, 5]
+
